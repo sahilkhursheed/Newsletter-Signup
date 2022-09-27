@@ -14,8 +14,8 @@ app.get("/",function(req,res){
 
 
 app.post("/", function (req, res) {
-    const firstName = req.body.fname;
-    const lastName = req.body.lname;
+    const firstName = req.body.firstName;
+    const lastName = req.body.lastName;
     const email = req.body.email;
     const data = {
         members: [
@@ -27,7 +27,8 @@ app.post("/", function (req, res) {
                     LNAME: lastName,
                 }
             }
-        ]
+        ],
+    update_existing: true
     };
     const jsonDATA = JSON.stringify(data);
 
